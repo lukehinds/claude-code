@@ -16,7 +16,7 @@ jobs:
       - uses: actions/checkout@v4
 
       - name: Publish package
-        uses: always-further/agent-attest@main
+        uses: always-further/nono-attest@main
         with:
           package-name: claude-code
           package-namespace: always-further
