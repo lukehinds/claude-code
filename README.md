@@ -6,7 +6,7 @@ Starter package for distributing a Claude Code profile, hook, groups, and trust 
 
 This starter is already pinned to the `always-further/claude-code` repository and the `always-further` namespace. You still need to replace:
 
-- `.github/workflows/publish.yml` uses `always-further/agent-attest@main`; change that only if the action moves
+- `.github/workflows/publish.yml` uses `always-further/agent-sign@main`; change that only if the action moves
 
 ## Package Contents
 
