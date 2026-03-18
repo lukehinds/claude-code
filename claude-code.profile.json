@@ -1,0 +1,14 @@
+{
+  "meta": {
+    "name": "claude-code",
+    "description": "Claude Code profile package that extends the built-in nono claude-code profile"
+  },
+  "extends": "claude-code",
+  "hooks": {
+    "claude-code": {
+      "event": "PostToolUseFailure",
+      "matcher": "Read|Write|Edit|Bash",
+      "script": "nono-hook.sh"
+    }
+  }
+}

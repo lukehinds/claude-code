@@ -1,0 +1,31 @@
+name: Publish nono package
+
+on:
+  push:
+    tags:
+      - "v*"
+
+permissions:
+  contents: read
+  id-token: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Publish package
+        uses: always-further/agent-attest@main
+        with:
+          package-name: claude-code
+          package-namespace: always-further
+          version: ${{ github.ref_name }}
+          path: .
+          files: |
+            package.json
+            claude-code.profile.json
+            CLAUDE.md
+            hooks/nono-hook.sh
+            groups.json
+            trust-policy.json

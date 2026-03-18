@@ -1,0 +1,18 @@
+{
+  "version": 1,
+  "instruction_patterns": ["SKILLS*", "CLAUDE*", "AGENT*"],
+  "publishers": [
+    {
+      "name": "claude-code-ci",
+      "issuer": "https://token.actions.githubusercontent.com",
+      "repository": "always-further/claude-code",
+      "workflow": ".github/workflows/publish.yml",
+      "ref_pattern": "refs/tags/v*"
+    }
+  ],
+  "blocklist": {
+    "digests": [],
+    "publishers": []
+  },
+  "enforcement": "warn"
+}
